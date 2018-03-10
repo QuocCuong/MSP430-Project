@@ -309,6 +309,7 @@ STT|Toán tử|Tên|Ví dụ|Kết quả
 ## **d. Toán tử tăng giảm**
 Các toán tử tăng một (++) và giảm một (- -) cung cấp các tiện lợi tương ứng cho việc cộng thêm 1 vào một biến số hay trừ đi 1 từ một biến số.
 
+>Ví dụ
 ```C
 #include <stdio.h>
  
@@ -335,3 +336,28 @@ int main()
     return 0;
 }
 ```
+
+Kết quả:
+```C
+i = 6, k = 5
+i = 6, k = 6
+i = 4, k = 5
+i = 4, k = 4
+```
+
+**Tức là ta có:**<br>
+++i và -–i thì i được tính trước sau đó sẽ lấy kết quả để thực hiện biểu thức
+i++ và i–- thì i được đưa vào thực hiện biểu thức trước sau đó mới tính i
+
+## **e. Toán tử gán**
+Toán tử gán được sử dụng để lưu trữ giá trị cho 1 biến nào đó.
+
+Toán tử|Ví dụ|Tương đương với
+-------|-----|---------------
+=|x=5|Gán 5 cho x
++=|x += 5| x = x+5
+-=|x -= 5| x = x-5
+*=|x *= 5| x = x*5
+/=|x /= 5| x = x/5
+%=|x %= 5| x = x%5
+
