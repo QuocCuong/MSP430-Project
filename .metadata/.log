@@ -304,3 +304,25 @@ org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://do
 
 !ENTRY org.eclipse.cdt.core 1 0 2018-03-10 09:58:50.514
 !MESSAGE Indexed 'Input_Switch(button)' (1 sources, 5 headers) in 0.165 sec: 167 declarations; 199 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2018-03-11 08:12:36.312 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 4 0 2018-03-11 08:12:42.969
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2018-03-11 08:12:43.046
+!MESSAGE debugServerDir=F:/ti/ccsv7/ccs_base/DebugServer
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-03-11 09:40:22.822
+!MESSAGE Indexed '#01_OUTPUT' (1 sources, 0 headers) in 0.14 sec: 2 declarations; 0 references; 1 unresolved inclusions; 0 syntax errors; 3 unresolved names (60%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-03-11 09:40:24.801
+!MESSAGE Indexed '#01_OUTPUT' (1 sources, 5 headers) in 0.196 sec: 167 declarations; 199 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-03-11 09:41:44.685
+!MESSAGE Indexed '01_OUTPUT' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)

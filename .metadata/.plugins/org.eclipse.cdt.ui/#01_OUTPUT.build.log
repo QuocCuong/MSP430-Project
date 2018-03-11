@@ -1,0 +1,16 @@
+
+**** Build of configuration Debug for project #01_OUTPUT ****
+
+"F:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: MSP430 Compiler'
+"F:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.6.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="F:/ti/ccsv7/ccs_base/msp430/include" --include_path="D:/MegaSyn/SourceCodes/Github/MSP430-Project/#01_OUTPUT" --include_path="F:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.6.LTS/include" --advice:power=all --define=__MSP430F2272__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU19 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+'Finished building: "../main.c"'
+ 
+gmake[1]: Nothing to be done for 'secondary-outputs'.
+makefile:137: recipe for target 'all' failed
+gmake[1]: *** No rule to make target '#01_OUTPUT.out'.
+gmake: *** [all] Error 2
+
+**** Build Finished ****

@@ -1,0 +1,48 @@
+
+**** Build of configuration Debug for project 01_OUTPUT ****
+
+"F:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: MSP430 Compiler'
+"F:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.6.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="F:/ti/ccsv7/ccs_base/msp430/include" --include_path="D:/MegaSyn/SourceCodes/Github/MSP430-Project/01_OUTPUT" --include_path="F:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.6.LTS/include" --advice:power=all --define=__MSP430F2272__ -g --c99 --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU19 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 12: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 14: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 16: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 12: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 14: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 16: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+'Finished building: "../main.c"'
+ 
+'Building target: "01_OUTPUT.out"'
+'Invoking: MSP430 Linker'
+"F:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.6.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430F2272__ -g --c99 --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU19 -z -m"01_OUTPUT.map" --heap_size=80 --stack_size=80 -i"F:/ti/ccsv7/ccs_base/msp430/include" -i"F:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.6.LTS/lib" -i"F:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="01_OUTPUT_linkInfo.xml" --use_hw_mpy=none --rom_model -o "01_OUTPUT.out" "./main.obj" "../lnk_msp430f2272.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+'Finished building target: "01_OUTPUT.out"'
+ 
+'Building files: "01_OUTPUT.out"'
+'Invoking: MSP430 Hex Utility'
+"F:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.6.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "01_OUTPUT.hex"  "01_OUTPUT.out" 
+Translating to Intel format...
+   "01_OUTPUT.out" .text ==> .text
+   "01_OUTPUT.out" $fill000 ==> $fill000
+   "01_OUTPUT.out" PORT1 ==> PORT1
+   "01_OUTPUT.out" PORT2 ==> PORT2
+   "01_OUTPUT.out" ADC10 ==> ADC10
+   "01_OUTPUT.out" USCIAB0TX ==> USCIAB0TX
+   "01_OUTPUT.out" USCIAB0RX ==> USCIAB0RX
+   "01_OUTPUT.out" TIMERA1 ==> TIMERA1
+   "01_OUTPUT.out" TIMERA0 ==> TIMERA0
+   "01_OUTPUT.out" WDT ==> WDT
+   "01_OUTPUT.out" TIMERB1 ==> TIMERB1
+   "01_OUTPUT.out" TIMERB0 ==> TIMERB0
+   "01_OUTPUT.out" NMI ==> NMI
+   "01_OUTPUT.out" .reset ==> .reset
+'Finished building: "01_OUTPUT.out"'
+ 
+
+**** Build Finished ****
