@@ -1,0 +1,9 @@
+
+**** Build of configuration Debug for project 02_INPUT ****
+
+"F:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: '02_INPUT.out' is up to date.
+gmake[1]: Nothing to be done for 'secondary-outputs'.
+
+**** Build Finished ****

@@ -1,0 +1,23 @@
+#include <msp430.h> 
+
+void main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;
+	P1DIR &=~ BIT0;
+	P3DIR = 0xff;
+
+	int a=0;
+
+	while(1){
+	    if((P1IN & BIT0) == 0){
+	        __delay_cycles(500000);
+	        a = a+1;
+	        if(a==2){
+	            P3OUT |= BIT0;
+	            a=0;
+	        }
+	        else
+	            P3OUT &=~ BIT0;
+	    }
+	}
+}

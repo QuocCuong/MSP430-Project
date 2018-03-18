@@ -1,0 +1,54 @@
+#include <msp430.h> 
+
+#define button0 BIT0
+#define button1 BIT1
+#define button2 BIT2
+#define button3 BIT3
+
+unsigned char button3_status;
+
+void main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;
+	P1DIR = 0xf0;
+	P3DIR = 0xff;
+
+	P1IES |= BIT0 + BIT1 + BIT2 + BIT3;     // Ngat canh xuong (high-to-low)
+	P1IE  |= BIT0 + BIT1 + BIT2 + BIT3;     // Cho phep P1.0, P1.1, P1.2, P1.3 ngat
+	P1IFG &=~ BIT0 + BIT1 + BIT2 + BIT3;    // Xoa co ngat
+
+	__bis_SR_register(GIE);
+	while(1){
+	    if(button3_status == 1){
+	        P3OUT |= BIT3;
+	        __delay_cycles(200000);
+	        P3OUT |= BIT3;
+            __delay_cycles(200000);
+	    }
+	}
+}
+
+#pragma vector=PORT1_VECTOR
+__interrupt void ISR_PORT1(){
+    if((P1IFG&button0) == button0){
+        P3OUT |= BIT0;
+        P1IFG &=~ BIT0;         // Clear Flag
+    }
+    if((P1IFG&button1) == button1){
+        for(int i=0; i<10; i++){
+            P3OUT |= BIT1;
+            __delay_cycles(200000);
+            P3OUT &= ~BIT1;
+            __delay_cycles(200000);
+        }
+        P1IFG &=~ BIT1;         // Clear Flag
+    }
+    if((P1IFG&button2) == button2){
+        button3_status = 1;
+        P1IFG &=~ BIT2;         // Clear Flag
+    }
+    if((P1IFG&button3) == button3){
+        P3OUT = 0x00;
+        P1IFG &=~ BIT3;         // Clear Flag
+    }
+}

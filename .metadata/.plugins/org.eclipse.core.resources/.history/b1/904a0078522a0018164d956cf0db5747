@@ -1,0 +1,16 @@
+#include <msp430.h> 
+
+#define button0 BIT0
+#define button1 BIT1
+#define button2 BIT2
+#define button3 BIT3
+
+void main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;
+	P1DIR = 0xf0;
+	P3DIR = 0xff;
+	while(1){
+
+	}
+}
